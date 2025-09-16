@@ -47,6 +47,22 @@ public:
     }
 };
 
+Node* middleNode(Node* head) {
+       int cnt=0;
+       Node* temp=head;
+       while(temp){
+           temp=temp->next;
+           cnt++;
+       }
+       int Mid=(cnt)/2;
+       while(Mid>0){
+           head=head->next;
+           Mid--;
+       }
+        return head;
+}
+
+
 int main() {
     LinkedList ll;
     ll.insert(1);

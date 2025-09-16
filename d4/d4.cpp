@@ -2,10 +2,11 @@
 using namespace std;
 
 // Node structure for Doubly Linked List
-struct Node {
+class Node {
+public:
     int data;
-    Node* prev; // Pointer to previous node
-    Node* next; // Pointer to next node
+    Node* prev;
+    Node* next;
 };
 
 // Insert at the beginning
