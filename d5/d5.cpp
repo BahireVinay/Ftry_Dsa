@@ -55,8 +55,8 @@ bool hasCycle(ListNode *head) {
     The number of the nodes in the list is in the range [0, 104].
     -105 <= Node.val <= 105
     pos is -1 or a valid index in the linked-list.
-*/
-    if (head == NULL || head->next == NULL) return false;
+    
+ if (head == NULL || head->next == NULL) return false;
 
     ListNode* temp = head;
     int cnt = 0;
@@ -72,6 +72,18 @@ bool hasCycle(ListNode *head) {
 
     // If we hit the limit → assume cycle
     return true;
+    */
+        if(head == nullptr || head->next == nullptr) return false;
+
+        ListNode*slow=head;
+        ListNode*fast=head;
+        
+        while(fast!=nullptr && fast->next!=nullptr){
+            fast=fast->next->next;
+            slow=slow->next;
+            if(fast==slow)return true;
+        }
+        return false;
 }
 };
 ListNode* convertARRtoLL(int arr[],int n){
