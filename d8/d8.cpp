@@ -55,10 +55,32 @@ private:
             return half * half * x; // odd power
     }
 };
+const long long MOD = 1000000007;
+
+    long long binpow(long long a, long long b, long long mod) {
+        long long res = 1;
+        a %= mod;
+        while (b > 0) {
+            if (b & 1) res = (res * a) % mod;
+            a = (a * a) % mod;
+            b >>= 1;
+        }
+        return res;
+    }
+
+    int countGoodNumbers(long long n) {
+        long long even_count = (n + 1) / 2;
+        long long odd_count = n / 2;
+
+        long long part1 = binpow(5, even_count, MOD);
+        long long part2 = binpow(4, odd_count, MOD);
+
+        return (part1 * part2) % MOD;
+    }
 
 int main(){
     Solution s;
-    string str="   -42";
+    string str="-42";
     cout<<s.myAtoi(str);
     return 0;
 }
