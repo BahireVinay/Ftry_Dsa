@@ -1,5 +1,5 @@
 #include <iostream>
-
+//the following code is for finding middle node of linked list
 class Node {
 public:
     int data;

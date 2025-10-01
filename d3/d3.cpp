@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+//the following code is for basic operations on singly linked list 
 // Node structure
 struct Node {
     int data;

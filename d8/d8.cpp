@@ -82,5 +82,8 @@ int main(){
     Solution s;
     string str="-42";
     cout<<s.myAtoi(str);
+    //cout<<s.countGoodNumbers(50);
+    //cout<<s.myPow(2.00000, -2147483648);
+    
     return 0;
 }

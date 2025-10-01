@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+//the following code is for basic operations on doubly linked list
 // Node structure for Doubly Linked List
 class Node {
 public:

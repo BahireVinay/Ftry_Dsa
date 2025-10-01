@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//the following is for linked list problems
   struct ListNode {
       int val;
       ListNode *next;
